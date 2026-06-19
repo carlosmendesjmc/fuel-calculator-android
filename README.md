@@ -160,6 +160,161 @@ main
 ├── feature/calculation
 ├── feature/result-screen
 └── feature/validation
+
+## 8. Welcome Screen
+
+**Activity**
+
+WelcomeActivity
+
+**Objetivo**
+
+Tela inicial do aplicativo.
+
+**Commit**
+
+```bash
+git commit -m "feat: create welcome screen"
+```
+
+**Screenshot**
+
+Adicionar imagem da tela após conclusão.
+
+---
+
+## 9. Fuel Price Screen
+
+**Activity**
+
+FuelPriceActivity
+
+**Objetivo**
+
+Tela para informar o preço do combustível.
+
+**Commit**
+
+```bash
+git commit -m "feat: create fuel price screen"
+```
+
+**Screenshot**
+
+Adicionar imagem da tela após conclusão.
+
+---
+
+## 10. Vehicle Consumption Screen
+
+**Activity**
+
+VehicleConsumptionActivity
+
+**Objetivo**
+
+Tela para informar o consumo do veículo.
+
+**Commit**
+
+```bash
+git commit -m "feat: create vehicle consumption screen"
+```
+
+**Screenshot**
+
+Adicionar imagem da tela após conclusão.
+
+---
+
+## 11. Distance Screen
+
+**Activity**
+
+DistanceActivity
+
+**Objetivo**
+
+Tela para informar a distância da viagem.
+
+**Commit**
+
+```bash
+git commit -m "feat: create distance screen"
+```
+
+**Screenshot**
+
+Adicionar imagem da tela após conclusão.
+
+---
+
+## 12. Calculation Logic
+
+**Objetivo**
+
+Implementar a lógica de cálculo do custo da viagem.
+
+**Commit**
+
+```bash
+git commit -m "feat: implement trip cost calculation"
+```
+
+---
+
+## 13. Result Screen
+
+**Activity**
+
+ResultActivity
+
+**Objetivo**
+
+Tela para exibir o resultado do cálculo.
+
+**Commit**
+
+```bash
+git commit -m "feat: create result screen"
+```
+
+**Screenshot**
+
+Adicionar imagem da tela após conclusão.
+
+---
+
+## 14. Input Validation
+
+**Objetivo**
+
+Validar os dados informados pelo usuário.
+
+**Commit**
+
+```bash
+git commit -m "feat: add input validation"
+```
+
+---
+
+## 15. UI Improvements
+
+**Objetivo**
+
+Melhorar a aparência e experiência visual do aplicativo.
+
+**Commit**
+
+```bash
+git commit -m "feat: improve user interface"
+```
+
+**Screenshot**
+
+Adicionar imagens da versão final do aplicativo.
+
 ```
 
 ## Status do projeto
