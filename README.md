@@ -165,7 +165,7 @@ main
 
 **Activity**
 
-WelcomeActivity
+MainActivity
 
 **Objetivo**
 
