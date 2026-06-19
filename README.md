@@ -161,7 +161,7 @@ main
 ├── feature/result-screen
 └── feature/validation
 
-## 8. Welcome Screen
+### 8. Welcome Screen
 
 **Activity**
 
