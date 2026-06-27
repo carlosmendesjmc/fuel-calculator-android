@@ -15,7 +15,6 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="32dp"
         android:text="INICIAR CÁLCULO"
-        android:textAllCaps="false"
         android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@android:color/white"
@@ -27,6 +26,94 @@
         app:iconGravity="textStart"
         app:iconSize="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_PlanejeSuaaViagem"
+        android:layout_width="86dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="24dp"
+        android:text=" Planeje                sua viagem"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btn_IniciarCalculo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_EconomizeDinheiro"
+        android:layout_width="89dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="24dp"
+        android:text="Economize                dinheiro"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btn_IniciarCalculo"
+        app:layout_constraintEnd_toStartOf="@+id/txt_MaisPrecisaoNosCalculos"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txt_PlanejeSuaaViagem" />
+
+    <TextView
+        android:id="@+id/txt_MaisPrecisaoNosCalculos"
+        android:layout_width="102dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="24dp"
+        android:text="Mais precisão  nos cálculos"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btn_IniciarCalculo"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_PocketWallet"
+        android:layout_width="87dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_EconomizeDinheiro"
+        app:layout_constraintEnd_toStartOf="@+id/img_BarChart"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_Target"
+        app:srcCompat="@drawable/ic_pocket_wallet" />
+
+    <ImageView
+        android:id="@+id/img_Target"
+        android:layout_width="87dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_PlanejeSuaaViagem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_target_planejesuaviagem" />
+
+    <ImageView
+        android:id="@+id/img_BarChart"
+        android:layout_width="99dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_MaisPrecisaoNosCalculos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_barchart_maisprecisaonoscalculos" />
+
+    <TextView
+        android:id="@+id/txt_Textoinf_CalculadoraDeCombustivel"
+        android:layout_width="198dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="60dp"
+        android:text="Calcule o custo de combustível da sua viagem."
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/img_PocketWallet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_Titulo_CalculadoraDeCombustivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Calculadora de Combustível"
+        app:layout_constraintBottom_toTopOf="@+id/txt_Textoinf_CalculadoraDeCombustivel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
