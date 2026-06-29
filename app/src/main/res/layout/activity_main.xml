@@ -3,9 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/Midnight_MainActivity_WelcomeScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_IniciarCalculo"
@@ -31,91 +33,145 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/txt_PlanejeSuaaViagem"
-        android:layout_width="86dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginBottom="24dp"
-        android:text=" Planeje                sua viagem"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/btn_IniciarCalculo"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/txt_EconomizeDinheiro"
-        android:layout_width="89dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="24dp"
-        android:text="Economize                dinheiro"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/btn_IniciarCalculo"
-        app:layout_constraintEnd_toStartOf="@+id/txt_MaisPrecisaoNosCalculos"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/txt_PlanejeSuaaViagem" />
-
-    <TextView
-        android:id="@+id/txt_MaisPrecisaoNosCalculos"
-        android:layout_width="102dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginBottom="24dp"
-        android:text="Mais precisão  nos cálculos"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/btn_IniciarCalculo"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <ImageView
-        android:id="@+id/img_PocketWallet"
-        android:layout_width="87dp"
-        android:layout_height="39dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/txt_EconomizeDinheiro"
-        app:layout_constraintEnd_toStartOf="@+id/img_BarChart"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/img_Target"
-        app:srcCompat="@drawable/ic_pocket_wallet" />
-
-    <ImageView
-        android:id="@+id/img_Target"
-        android:layout_width="87dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/txt_PlanejeSuaaViagem"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_target_planejesuaviagem" />
-
-    <ImageView
-        android:id="@+id/img_BarChart"
-        android:layout_width="99dp"
-        android:layout_height="38dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/txt_MaisPrecisaoNosCalculos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_barchart_maisprecisaonoscalculos" />
-
-    <TextView
-        android:id="@+id/txt_Textoinf_CalculadoraDeCombustivel"
-        android:layout_width="198dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="60dp"
-        android:text="Calcule o custo de combustível da sua viagem."
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/img_PocketWallet"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
         android:id="@+id/txt_Titulo_CalculadoraDeCombustivel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
+        android:textSize="28dp"
+        android:textColor="@color/white"
         android:text="Calculadora de Combustível"
         app:layout_constraintBottom_toTopOf="@+id/txt_Textoinf_CalculadoraDeCombustivel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:layout_width="52dp"
+        android:layout_height="3dp"
+        android:background="@color/Neon_BlueMono01_Button"
+        app:layout_constraintBottom_toTopOf="@+id/txt_Textoinf_CalculadoraDeCombustivel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Titulo_CalculadoraDeCombustivel" />
+
+    <TextView
+        android:id="@+id/txt_Textoinf_CalculadoraDeCombustivel"
+        android:layout_width="255dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="60dp"
+        android:text="Calcule o custo de combustível da sua viagem."
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/layout_FeatureBenefits"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_FeatureBenefits"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btn_IniciarCalculo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Item 1: Planeje sua viagem -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_Target"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:tint="@color/Neon_BlueMono01_Button"
+                app:srcCompat="@drawable/ic_target_planejesuaviagem" />
+
+            <TextView
+                android:id="@+id/txt_PlanejeSuaaViagem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                android:text="Planeje\nsua viagem"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <!-- Linha divisória 1 -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="48dp"
+            android:background="@color/Neon_BlueMono01_Button" />
+
+        <!-- Item 2: Economize dinheiro -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_PocketWallet"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:tint="@color/Neon_BlueMono01_Button"
+                app:srcCompat="@drawable/ic_pocket_wallet" />
+
+            <TextView
+                android:id="@+id/txt_EconomizeDinheiro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                android:text="Economize\ndinheiro"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <!-- Linha divisória 2 -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="48dp"
+            android:background="@color/Neon_BlueMono01_Button" />
+
+        <!-- Item 3: Mais precisão nos cálculos -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_BarChart"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:tint="@color/Neon_BlueMono01_Button"
+                app:srcCompat="@drawable/ic_barchart_maisprecisaonoscalculos" />
+
+            <TextView
+                android:id="@+id/txt_MaisPrecisaoNosCalculos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                android:text="Mais precisão\nnos cálculos"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
