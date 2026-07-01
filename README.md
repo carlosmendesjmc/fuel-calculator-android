@@ -1,99 +1,205 @@
 # Fuel Calculator
 
-Aplicativo Android desenvolvido em Kotlin para calcular o gasto de combustível de uma viagem com base na distância, consumo do veículo e preço do combustível.
+Aplicativo Android desenvolvido em **Kotlin** para calcular o custo estimado de combustível de uma viagem com base no preço do combustível, consumo médio do veículo e distância percorrida.
+
+Este projeto está sendo desenvolvido como parte do meu processo de aprendizado em desenvolvimento Android, com foco em boas práticas, organização de código, versionamento com Git e documentação técnica.
+
+---
+
 
 ## Sobre o projeto
 
-O objetivo deste projeto é praticar o desenvolvimento Android com Kotlin, criando um app com múltiplas telas, entrada de dados do usuário, navegação entre Activities e cálculo do custo final de uma viagem.
+O **Fuel Calculator** é um aplicativo Android criado para praticar o desenvolvimento mobile utilizando Kotlin e XML Layout.
 
-## Requisitos do app
+O objetivo do aplicativo é permitir que o usuário informe dados básicos de uma viagem e receba uma estimativa do custo total com combustível.
 
-* Cada informação do usuário será recebida em uma tela individual.
-* O app deverá receber:
+Além da funcionalidade principal, este projeto também tem como objetivo demonstrar organização no desenvolvimento, uso de Git Flow, criação de branches por funcionalidade, documentação contínua e evolução incremental da interface e da lógica do aplicativo.
 
-  * Preço do combustível
-  * Consumo do veículo
-  * Distância da viagem
-* A tela final deverá exibir:
+---
 
-  * Valor total estimado da viagem
-  * Resumo das informações digitadas anteriormente
+## Objetivos
+
+- Desenvolver um aplicativo Android nativo utilizando Kotlin.
+- Praticar criação de interfaces com XML.
+- Utilizar `ConstraintLayout` e `LinearLayout`.
+- Trabalhar com componentes do Material Design.
+- Criar telas separadas para cada entrada de dados.
+- Implementar lógica de cálculo de custo de viagem.
+- Organizar o projeto utilizando Git e GitHub.
+- Documentar o processo de aprendizado e as decisões técnicas.
+
+---
+
+## Funcionalidades previstas
+
+O aplicativo deverá receber as seguintes informações do usuário:
+
+- Preço do combustível.
+- Consumo médio do veículo.
+- Distância da viagem.
+
+Ao final, o aplicativo deverá exibir:
+
+- Quantidade estimada de litros necessários.
+- Valor total estimado da viagem.
+- Resumo das informações digitadas pelo usuário.
+
+---
 
 ## Tecnologias utilizadas
 
-* Kotlin
-* Android Studio
-* XML Layout
-* Gradle
-* Git e GitHub
+- Kotlin
+- Android Studio
+- XML Layout
+- Material Design Components
+- Gradle
+- Git
+- GitHub
 
-## Etapas realizadas até aqui
+---
 
-### 1. Criação do repositório no GitHub
-
-Foi criado um repositório no GitHub com o nome:
+## Estrutura do projeto
 
 ```text
-fuel-calculator-android
+FuelCalculator
+│
+├── app
+│   ├── Kotlin
+│   │   └── com.example.fuelcalculator
+│   │       └── MainActivity
+│   │
+│   └── res
+│       ├── drawable
+│       ├── layout
+│       ├── mipmap
+│       └── values
+│
+├── gradle
+├── build.gradle.kts
+├── settings.gradle.kts
+└── README.md
 ```
 
-### 2. Clone do repositório para o computador
+> A estrutura será atualizada conforme novas telas e funcionalidades forem implementadas.
 
-O repositório foi clonado para o computador local:
+---
+
+## Como executar
+
+Clone o repositório:
 
 ```bash
 git clone URL_DO_REPOSITORIO
 ```
 
-Depois, foi acessada a pasta do projeto:
+Entre na pasta do projeto:
 
 ```bash
 cd fuel-calculator-android
 ```
 
-### 3. Criação do projeto no Android Studio
+Abra o projeto no Android Studio.
 
-No Android Studio, foi criado um novo projeto com as seguintes configurações:
+Aguarde a sincronização do Gradle.
+
+Execute o aplicativo em um emulador ou dispositivo Android.
+
+---
+
+## Metodologia de desenvolvimento
+
+Este projeto está sendo desenvolvido seguindo uma organização semelhante à utilizada em equipes de desenvolvimento.
+
+### Organização adotada
+
+- Desenvolvimento incremental.
+- Uma branch para cada funcionalidade.
+- Commits pequenos e semânticos.
+- Uso de Git e GitHub para versionamento.
+- Organização das tarefas em um board.
+- Documentação contínua durante a evolução do projeto.
+
+### Fluxo de branches
 
 ```text
-Template: Empty Views Activity
-Name: FuelCalculator
-Package name: com.example.fuelcalculator
-Language: Kotlin
-Minimum SDK: API 24 ("Nougat"; Android 7.0)
-Build configuration language: Kotlin DSL (build.gradle.kts)
-```
-
-O projeto foi criado dentro da pasta do repositório clonado.
-
-### 4. Verificação da estrutura do projeto
-
-Após a criação, o projeto gerou a estrutura inicial:
-
-```text
-fuel-calculator-android
+main
 │
-├── app/
-├── gradle/
-├── build.gradle.kts
-├── settings.gradle.kts
-├── gradlew
-├── gradlew.bat
-├── gradle.properties
-└── .gitignore
+├── feature/welcome-screen
+├── feature/fuel-price-screen
+├── feature/vehicle-consumption-screen
+├── feature/distance-screen
+├── feature/calculation
+├── feature/result-screen
+└── feature/validation
 ```
 
-### 5. Correção de dependência Core KTX
+Essa abordagem permite manter a branch `main` mais estável e desenvolver cada funcionalidade de forma isolada.
 
-Durante a configuração inicial, foi identificado um erro relacionado à dependência:
+---
+
+## Roadmap
+
+- [x] Criar repositório no GitHub.
+- [x] Clonar repositório localmente.
+- [x] Criar projeto Android no Android Studio.
+- [x] Configurar estrutura inicial do projeto.
+- [x] Resolver incompatibilidade de dependência Core KTX.
+- [x] Criar documentação inicial.
+- [x] Criar board de desenvolvimento.
+- [x] Desenvolver Welcome Screen.
+- [ ] Criar tela de preço do combustível.
+- [ ] Criar tela de consumo do veículo.
+- [ ] Criar tela de distância da viagem.
+- [ ] Implementar lógica de cálculo.
+- [ ] Criar tela de resultado.
+- [ ] Implementar validação dos campos.
+- [ ] Realizar melhorias finais de interface.
+
+---
+
+## Diário de desenvolvimento
+
+### 1. Configuração inicial
+
+#### Objetivo
+
+Preparar o ambiente inicial do projeto Android, configurar o repositório Git e criar a estrutura base da aplicação.
+
+#### Atividades realizadas
+
+- Criação do repositório no GitHub.
+- Clone do repositório para o computador.
+- Criação do projeto no Android Studio.
+- Configuração do projeto com Kotlin.
+- Organização inicial da estrutura do projeto.
+- Primeiro versionamento na branch `main`.
+
+#### Aprendizados
+
+- Como criar e clonar um repositório GitHub.
+- Como criar um projeto Android dentro de uma pasta versionada.
+- Como verificar o estado do projeto com `git status`.
+- Como criar o primeiro commit.
+- Como enviar o projeto para o GitHub.
+- Diferença entre branch `main` e branches de funcionalidade.
+
+---
+
+### 2. Correção da dependência Core KTX
+
+#### Problema
+
+Durante a criação do projeto, foi identificado um erro relacionado à dependência:
 
 ```text
 androidx.core:core-ktx:1.19.0
 ```
 
-A versão exigia `compileSdk 37`, mas o projeto estava usando `compileSdk 36.1`.
+Essa versão exigia `compileSdk 37`, enquanto o projeto estava configurado com `compileSdk 36`.
 
-Para corrigir, foi alterada a versão do `coreKtx` no arquivo:
+#### Solução
+
+A versão do `coreKtx` foi alterada no arquivo:
 
 ```text
 gradle/libs.versions.toml
@@ -111,212 +217,330 @@ Para:
 coreKtx = "1.16.0"
 ```
 
-Após a alteração, foi feita a sincronização do Gradle no Android Studio.
+#### Aprendizados
 
-### 6. Primeiro commit do projeto
+- Como identificar erros de compatibilidade entre dependências e `compileSdk`.
+- Diferença entre atualizar o SDK e alterar a versão de uma biblioteca.
+- Importância da sincronização do Gradle.
+- Como localizar dependências no arquivo `libs.versions.toml`.
 
-Após validar que o projeto foi criado corretamente, os arquivos foram adicionados ao Git:
+---
 
-```bash
-git add .
-```
+### 3. Welcome Screen
 
-Em seguida, foi criado o primeiro commit:
-
-```bash
-git commit -m "feat: create initial Android project"
-```
-
-Esse commit representa a criação da estrutura inicial do projeto Android.
-
-### 7. Envio para o GitHub
-
-Depois do primeiro commit, o projeto foi enviado para o GitHub:
-
-```bash
-git push -u origin main
-```
-
-## Próximas etapas
-
-* Criar branch para a tela inicial.
-* Desenvolver a Welcome Screen.
-* Criar tela para inserir o preço do combustível.
-* Criar tela para inserir o consumo do veículo.
-* Criar tela para inserir a distância da viagem.
-* Criar tela de resultado.
-* Implementar validações dos campos.
-* Melhorar o layout visual do app.
-
-## Fluxo de branches planejado
+#### Activity
 
 ```text
-main
-│
-├── feature/welcome-screen
-├── feature/fuel-price-screen
-├── feature/vehicle-consumption-screen
-├── feature/distance-screen
-├── feature/calculation
-├── feature/result-screen
-└── feature/validation
-```
-### 8. Welcome Screen
-
-**Activity**
-
 MainActivity
-
-**Objetivo**
-
-Tela inicial do aplicativo.
-
-**Commit**
-
-```bash
-git commit -m "feat: create welcome screen"
 ```
 
-**Screenshot**
+#### Objetivo
 
-Adicionar imagem da tela após conclusão.
+Criar uma tela inicial moderna para recepcionar o usuário antes do início do cálculo da viagem.
+
+#### Solução implementada
+
+Nesta etapa foi construída a tela inicial do aplicativo contendo:
+
+- Background principal personalizado.
+- Ilustração superior.
+- Ícone principal de combustível.
+- Título da aplicação.
+- Linha decorativa abaixo do título.
+- Texto descritivo.
+- Seção de benefícios.
+- Botão personalizado para iniciar o fluxo.
+- Organização visual utilizando `ConstraintLayout` e `LinearLayout`.
+
+#### Componentes utilizados
+
+- `ConstraintLayout`
+- `LinearLayout`
+- `MaterialButton`
+- `ImageView`
+- `TextView`
+- `View`
+- Drawables personalizados
+- Vector Drawables
+- Arquivos de cores em `values/colors.xml`
+
+#### Principais aprendizados
+
+Durante o desenvolvimento da Welcome Screen foram estudados e aplicados os seguintes conceitos:
+
+- Estrutura de layouts XML.
+- Posicionamento com `ConstraintLayout`.
+- Agrupamento de componentes com `LinearLayout`.
+- Diferença entre orientação horizontal e vertical.
+- Criação de botão moderno com `MaterialButton`.
+- Personalização de botão com Drawable.
+- Uso de gradiente em XML.
+- Aplicação de cantos arredondados.
+- Uso de `backgroundTint`.
+- Utilização de `app:backgroundTint="@null"` para preservar o Drawable personalizado.
+- Uso de ícones vetoriais.
+- Alteração de cor de ícones com `tint`.
+- Diferença entre `android:` e `app:`.
+- Diferença entre `dp` e `sp`.
+- Diferença entre Margin e Padding.
+- Uso de linhas divisórias com `View`.
+- Organização dos recursos em `drawable`, `layout` e `values`.
+
+#### Decisões de implementação
+
+- A `MainActivity` foi mantida como tela inicial do aplicativo, evitando criar uma Activity extra desnecessária.
+- Foi utilizado `MaterialButton` em vez de `Button`, pois ele oferece suporte nativo a ícones e recursos do Material Design.
+- A seção de benefícios foi reorganizada com `LinearLayout`, facilitando o agrupamento de ícone e texto.
+- As cores foram centralizadas em arquivos de recurso, evitando valores soltos no layout.
+- O background personalizado do botão foi separado em um arquivo Drawable, facilitando manutenção e reutilização.
+
+#### Screenshot
+
+Adicionar imagem da Welcome Screen.
 
 ---
 
-## 9. Fuel Price Screen
+### 4. Fuel Price Screen
 
-**Activity**
+#### Activity prevista
 
+```text
 FuelPriceActivity
-
-**Objetivo**
-
-Tela para informar o preço do combustível.
-
-**Commit**
-
-```bash
-git commit -m "feat: create fuel price screen"
 ```
 
-**Screenshot**
+#### Objetivo
 
-Adicionar imagem da tela após conclusão.
+Criar a tela responsável por receber o preço do combustível informado pelo usuário.
+
+#### Status
+
+Em desenvolvimento.
 
 ---
 
-## 10. Vehicle Consumption Screen
+### 5. Vehicle Consumption Screen
 
-**Activity**
+#### Activity prevista
 
+```text
 VehicleConsumptionActivity
-
-**Objetivo**
-
-Tela para informar o consumo do veículo.
-
-**Commit**
-
-```bash
-git commit -m "feat: create vehicle consumption screen"
 ```
 
-**Screenshot**
+#### Objetivo
 
-Adicionar imagem da tela após conclusão.
+Criar a tela responsável por receber o consumo médio do veículo.
+
+#### Status
+
+Em desenvolvimento.
 
 ---
 
-## 11. Distance Screen
+### 6. Distance Screen
 
-**Activity**
+#### Activity prevista
 
+```text
 DistanceActivity
-
-**Objetivo**
-
-Tela para informar a distância da viagem.
-
-**Commit**
-
-```bash
-git commit -m "feat: create distance screen"
 ```
 
-**Screenshot**
+#### Objetivo
 
-Adicionar imagem da tela após conclusão.
+Criar a tela responsável por receber a distância da viagem.
+
+#### Status
+
+Em desenvolvimento.
 
 ---
 
-## 12. Calculation Logic
+### 7. Calculation Logic
 
-**Objetivo**
+#### Objetivo
 
-Implementar a lógica de cálculo do custo da viagem.
+Implementar a lógica responsável por calcular a quantidade de litros necessários e o custo total estimado da viagem.
 
-**Commit**
+#### Fórmula base
 
-```bash
-git commit -m "feat: implement trip cost calculation"
+```kotlin
+val litrosNecessarios = distancia / consumo
+val custoTotal = litrosNecessarios * precoCombustivel
 ```
+
+#### Status
+
+Em desenvolvimento.
 
 ---
 
-## 13. Result Screen
+### 8. Result Screen
 
-**Activity**
+#### Activity prevista
 
+```text
 ResultActivity
-
-**Objetivo**
-
-Tela para exibir o resultado do cálculo.
-
-**Commit**
-
-```bash
-git commit -m "feat: create result screen"
 ```
 
-**Screenshot**
+#### Objetivo
 
-Adicionar imagem da tela após conclusão.
+Criar a tela responsável por apresentar o resultado final do cálculo e o resumo das informações digitadas pelo usuário.
+
+#### Status
+
+Em desenvolvimento.
 
 ---
 
-## 14. Input Validation
+### 9. Input Validation
 
-**Objetivo**
+#### Objetivo
 
-Validar os dados informados pelo usuário.
+Validar os dados informados pelo usuário antes de avançar para as próximas telas ou realizar o cálculo.
 
-**Commit**
+#### Validações previstas
 
-```bash
-git commit -m "feat: add input validation"
-```
+- Campo vazio.
+- Valor zero.
+- Valor negativo.
+- Entrada inválida.
+
+#### Status
+
+Em desenvolvimento.
 
 ---
 
-## 15. UI Improvements
+## Decisões técnicas
 
-**Objetivo**
+### Uso de MaterialButton
 
-Melhorar a aparência e experiência visual do aplicativo.
+Foi utilizado `MaterialButton` no lugar do `Button` padrão para aproveitar recursos do Material Design, como suporte nativo a ícones, controle de tamanho, estilo visual mais moderno e melhor integração com temas.
 
-**Commit**
+### Uso de ConstraintLayout
 
-```bash
-git commit -m "feat: improve user interface"
+O `ConstraintLayout` foi utilizado como layout principal por permitir posicionamento flexível dos componentes e evitar hierarquias muito profundas.
+
+### Uso de LinearLayout
+
+O `LinearLayout` foi utilizado para organizar a seção de benefícios, agrupando cada ícone com seu respectivo texto e deixando a estrutura mais legível.
+
+### Uso de Drawables personalizados
+
+Drawables foram utilizados para criar backgrounds, gradientes, bordas arredondadas e elementos visuais reutilizáveis.
+
+### Organização por branches
+
+Cada funcionalidade do app está sendo desenvolvida em uma branch própria, simulando um fluxo profissional de desenvolvimento.
+
+---
+
+## Desafios encontrados
+
+### Incompatibilidade Core KTX
+
+Foi necessário corrigir a versão da dependência `coreKtx` para evitar conflito com o `compileSdk`.
+
+### Background do MaterialButton
+
+O background personalizado do botão inicialmente não era exibido corretamente. A solução foi utilizar:
+
+```xml
+app:backgroundTint="@null"
 ```
 
-**Screenshot**
+Isso impediu que o `MaterialButton` aplicasse uma cor sobre o Drawable personalizado.
 
-Adicionar imagens da versão final do aplicativo.
+### Organização da seção de benefícios
 
-```
+Inicialmente os ícones e textos estavam posicionados individualmente no `ConstraintLayout`. Depois, a seção foi refatorada usando `LinearLayout`, deixando o código mais organizado e fácil de manter.
+
+### Diferença entre dp e sp
+
+Foi identificado que tamanhos de texto devem utilizar `sp`, enquanto tamanhos de componentes, margens e espaçamentos devem utilizar `dp`.
+
+---
+
+## Competências desenvolvidas
+
+Durante o desenvolvimento deste projeto estão sendo desenvolvidas competências relacionadas a:
+
+- Desenvolvimento Android com Kotlin.
+- Criação de interfaces com XML.
+- Organização de layouts.
+- Uso de Material Design Components.
+- Criação e aplicação de Drawables.
+- Personalização de ícones.
+- Versionamento com Git.
+- Organização de branches.
+- Escrita de commits semânticos.
+- Documentação técnica.
+- Resolução de problemas.
+- Desenvolvimento incremental.
+
+---
+
+## Boas práticas adotadas
+
+- Branch por funcionalidade.
+- Commits semânticos.
+- Organização de recursos.
+- Separação de responsabilidades entre layout e recursos visuais.
+- Uso de nomes descritivos para componentes.
+- Documentação contínua do projeto.
+- Desenvolvimento em etapas pequenas.
+- Testes visuais frequentes durante a construção da interface.
+
+---
+
+## O que este projeto demonstra
+
+Este projeto demonstra conhecimentos iniciais e evolução prática em:
+
+- Kotlin
+- Android Studio
+- XML Layout
+- ConstraintLayout
+- LinearLayout
+- MaterialButton
+- Material Design
+- Drawables personalizados
+- Vector Drawables
+- Git
+- GitHub
+- Git Flow
+- Documentação
+- Organização de projeto
+- Resolução de problemas
+- Boas práticas de desenvolvimento
+
+---
+
+## Screenshots
+
+### Welcome Screen
+
+Adicionar imagem da tela inicial.
+
+### Fuel Price Screen
+
+Em desenvolvimento.
+
+### Vehicle Consumption Screen
+
+Em desenvolvimento.
+
+### Distance Screen
+
+Em desenvolvimento.
+
+### Result Screen
+
+Em desenvolvimento.
+
+---
 
 ## Status do projeto
 
-Projeto em desenvolvimento.
+🚧 Projeto em desenvolvimento.
+
+A primeira tela do aplicativo, **Welcome Screen**, foi finalizada visualmente. As próximas etapas serão a criação das telas de entrada de dados e a implementação da lógica de cálculo.
