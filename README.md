@@ -393,16 +393,26 @@ Em desenvolvimento.
 
 ### 9. Input Validation
 
-#### Objetivo
+### Objetivo
 
-Validar os dados informados pelo usuário antes de avançar para as próximas telas ou realizar o cálculo.
+Implementar a estrutura de navegação do aplicativo utilizando Intents entre todas as Activities.
 
-#### Validações previstas
+### Funcionalidades implementadas
 
-- Campo vazio.
-- Valor zero.
-- Valor negativo.
-- Entrada inválida.
+- Criação de todas as Activities do projeto.
+- Configuração do AndroidManifest.xml.
+- Navegação entre todas as telas utilizando Intents.
+- Testes do fluxo completo da aplicação.
+- Resolução de conflitos de merge durante o desenvolvimento.
+
+### Conceitos praticados
+
+- Intents explícitas
+- AndroidManifest
+- Activity Lifecycle
+- Git Merge
+- Resolução de conflitos (Merge Conflict)
+- Organização por branches
 
 #### Status
 
