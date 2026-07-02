@@ -8,25 +8,30 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
+class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_result)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        //Recuperando o button
-        val btnIniciarCalculo = findViewById<Button>( R.id.btn_IniciarCalculo)
+        //Recuperar o button
 
-        // Ação do botão ao clicar, ele navega ate a proxima tela
-        btnIniciarCalculo.setOnClickListener {
-            val intent = Intent(this, FuelPriceActivity::class.java)
+        val btnVoltar = findViewById<Button>(R.id.btn_VoltarResult)
+        val btnFazerOutroCalculo =findViewById<Button>(R.id.btn_FazeroutroCalculoResult)
+
+        btnVoltar.setOnClickListener {
+            val intent = Intent(this, DistanceActivity::class.java)
             startActivity(intent)
         }
 
+        btnFazerOutroCalculo.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
