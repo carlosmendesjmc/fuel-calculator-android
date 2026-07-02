@@ -3,17 +3,212 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/Midnight_MainActivity_WelcomeScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_rouded"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_IniciarCalculo"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24sp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/bg_button"
+        android:text="INICIAR CÁLCULO"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:icon="@drawable/ic_arrow_forward"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp"
+        app:iconSize="32dp"
+        app:iconTint="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="322dp"
+        android:layout_height="184dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="82dp"
+        android:src="@drawable/ic_mainactivity_welcome_screen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    <TextView
+        android:id="@+id/txt_Titulo_CalculadoraDeCombustivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Calculadora de Combustível"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="52dp"
+        android:layout_height="3dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/Neon_BlueMono01_Button"
+        app:layout_constraintBottom_toTopOf="@+id/txt_Textoinf_CalculadoraDeCombustivel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txt_Textoinf_CalculadoraDeCombustivel"
+        android:layout_width="255dp"
+        android:layout_height="71dp"
+        android:text="Calcule o custo de combustível da sua viagem."
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/layout_FeatureBenefits"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_FeatureBenefits"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btn_IniciarCalculo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Item 1: Planeje sua viagem -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_Target"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:tint="@color/Neon_BlueMono01_Button"
+                app:srcCompat="@drawable/ic_target_planejesuaviagem" />
+
+            <TextView
+                android:id="@+id/txt_PlanejeSuaaViagem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:textColor="@color/white"
+                android:text="Planeje\nsua viagem"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <!-- Linha divisória 1 -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="48dp"
+            android:background="@color/Neon_BlueMono01_Button" />
+
+        <!-- Item 2: Economize dinheiro -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_PocketWallet"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/ic_pocket_wallet"
+                app:tint="@color/Neon_BlueMono01_Button" />
+
+            <TextView
+                android:id="@+id/txt_EconomizeDinheiro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:textColor="@color/white"
+                android:text="Economize\ndinheiro"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <!-- Linha divisória 2 -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="48dp"
+            android:background="@color/Neon_BlueMono01_Button" />
+
+        <!-- Item 3: Mais precisão nos cálculos -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_BarChart"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/ic_barchart_maisprecisaonoscalculos"
+                app:tint="@color/Neon_BlueMono01_Button" />
+
+            <TextView
+                android:id="@+id/txt_MaisPrecisaoNosCalculos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:textColor="@color/white"
+                android:text="  Mais precisão\nnos cálculos"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="16dp"
+        app:tint="@color/Neon_BlueMono01_Button"
+        app:layout_constraintBottom_toTopOf="@+id/txt_Titulo_CalculadoraDeCombustivel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/ic_fuel_bomb" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
