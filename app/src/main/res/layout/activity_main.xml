@@ -58,7 +58,7 @@
 
 
     <TextView
-        android:id="@+id/txt_Titulo_CalculadoraDeCombustivel"
+        android:id="@+id/edt_Titulo_CalculadoraDeCombustivel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -76,14 +76,14 @@
         android:layout_height="3dp"
         android:layout_marginBottom="8dp"
         android:background="@color/Neon_BlueMono01_Button"
-        app:layout_constraintBottom_toTopOf="@+id/txt_Textoinf_CalculadoraDeCombustivel"
+        app:layout_constraintBottom_toTopOf="@+id/edt_Textoinf_CalculadoraDeCombustivel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
 
     <TextView
-        android:id="@+id/txt_Textoinf_CalculadoraDeCombustivel"
+        android:id="@+id/edt_Textoinf_CalculadoraDeCombustivel"
         android:layout_width="255dp"
         android:layout_height="71dp"
         android:text="Calcule o custo de combustível da sua viagem."
@@ -124,7 +124,7 @@
                 app:srcCompat="@drawable/ic_target_planejesuaviagem" />
 
             <TextView
-                android:id="@+id/txt_PlanejeSuaaViagem"
+                android:id="@+id/edt_PlanejeSuaaViagem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8sp"
@@ -155,7 +155,7 @@
                 app:tint="@color/Neon_BlueMono01_Button" />
 
             <TextView
-                android:id="@+id/txt_EconomizeDinheiro"
+                android:id="@+id/edt_EconomizeDinheiro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8sp"
@@ -186,7 +186,7 @@
                 app:tint="@color/Neon_BlueMono01_Button" />
 
             <TextView
-                android:id="@+id/txt_MaisPrecisaoNosCalculos"
+                android:id="@+id/edt_MaisPrecisaoNosCalculos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8sp"
@@ -203,7 +203,7 @@
         android:layout_height="75dp"
         android:layout_marginTop="16dp"
         app:tint="@color/Neon_BlueMono01_Button"
-        app:layout_constraintBottom_toTopOf="@+id/txt_Titulo_CalculadoraDeCombustivel"
+        app:layout_constraintBottom_toTopOf="@+id/edt_Titulo_CalculadoraDeCombustivel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"

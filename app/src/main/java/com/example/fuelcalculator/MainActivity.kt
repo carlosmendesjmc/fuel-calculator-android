@@ -1,6 +1,8 @@
 package com.example.fuelcalculator
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +18,15 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        //Recuperando o button
+        val btnIniciarCalculo = findViewById<Button>( R.id.btn_IniciarCalculo)
+
+        // Ação do botão ao clicar, ele navega ate a proxima tela
+        btnIniciarCalculo.setOnClickListener {
+            val intent = Intent(this, FuelPriceActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
