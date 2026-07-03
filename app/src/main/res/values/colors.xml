@@ -6,4 +6,6 @@
     <color name="Neon_BlueMono02">#1660b3</color>
     <color name="Midnight_MainActivity_WelcomeScreen">#12214e</color>
     <color name="Backgroud">#000E35</color>
+    <color name="edtBlue">#123456</color>
+    <color name="edtTintbluen">#5D5D5D</color>
 </resources>
