@@ -3,29 +3,164 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/Midnight_MainActivity_WelcomeScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ResultActivity">
 
-    <Button
+    <LinearLayout
+        android:id="@+id/ResultadoCabecalho"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/bg_roudedresult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_TotalViagemResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 250.0"
+            android:textColor="@color/black"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_CustoEstimadoDaViagemResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Custo estimado da viagem"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_VoltarResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="Voltar"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:background="@drawable/bg_button"
+        app:backgroundTint="@null"
+        app:icon="@drawable/ic_arrow_back"
+        app:iconTint="@color/white"
+        app:iconSize="28dp"
+        app:iconGravity="textStart"
+        app:iconPadding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_FazeroutroCalculoResult"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_FazeroutroCalculoResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="Fazer outro Calculo"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:background="@drawable/bg_button"
+        app:backgroundTint="@null"
+        app:icon="@drawable/ic_arrow_forward"
+        app:iconTint="@color/white"
+        app:iconSize="28dp"
+        app:iconGravity="textStart"
+        app:iconPadding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_VoltarResult" />
+
+
+    <TextView
+        android:id="@+id/tvLabelResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Resumo da Viagem"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ResultadoCabecalho" />
+
+    <TextView
+        android:id="@+id/tvPrecoLabelResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Preço"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/tvPrecoResult"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelResult" />
+
+    <TextView
+        android:id="@+id/tvPrecoResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="R$ 5.5"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvPrecoLabelResult"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelResult" />
+
+    <TextView
+        android:id="@+id/tvConsumoLabelResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Consumo"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/tvPrecoLabelResult"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrecoLabelResult" />
+
+    <TextView
+        android:id="@+id/tvConsumoLabelResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="12 L"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/tvPrecoResult"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrecoResult" />
+
+    <TextView
+        android:id="@+id/tcDistanciaLabelResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Distancia"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/tvPrecoLabelResult"
+        app:layout_constraintTop_toBottomOf="@+id/tvConsumoLabelResult" />
+
+    <TextView
+        android:id="@+id/tvDistanciaResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="600Km"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/tvPrecoResult"
+        app:layout_constraintTop_toBottomOf="@+id/tvConsumoLabelResult" />
 </androidx.constraintlayout.widget.ConstraintLayout>
