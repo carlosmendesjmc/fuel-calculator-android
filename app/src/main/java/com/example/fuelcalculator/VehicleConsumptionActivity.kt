@@ -2,12 +2,14 @@ package com.example.fuelcalculator
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.appbar.MaterialToolbar
 
 class VehicleConsumptionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +22,13 @@ class VehicleConsumptionActivity : AppCompatActivity() {
             insets
         }
 
+        //Recupera os dados toolbar
+
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbarVehicleConsumption)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+
         //Recupera dados da intent tela anterior
         val precoCombustivel = intent.getDoubleExtra("PRECO_COMBUSTIVEL",0.0)
         println("LOG CARLOS $precoCombustivel")
@@ -31,19 +40,25 @@ class VehicleConsumptionActivity : AppCompatActivity() {
 
         //Recuperar o button
 
-        val btnVoltar = findViewById<Button>(R.id.btn_VoltarVehicleConsumption)
+
         val btnProximo = findViewById<Button>(R.id.btn_ProximoVehicleConsumption)
 
-        btnVoltar.setOnClickListener {
-            val intent = Intent(this, FuelPriceActivity::class.java)
-            startActivity(intent)
-        }
         btnProximo.setOnClickListener {
             val edtVehicleConsumtpionValue = edtConsumoPorLitro.text.toString().toInt()
             val intent = Intent(this, DistanceActivity::class.java)
             intent.putExtra("CONSUMO_POR_LITRO", edtVehicleConsumtpionValue)
             intent.putExtra("PRECO_COMBUSTIVEL", precoCombustivel)
             startActivity(intent)
+        }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId){
+            android.R.id.home ->{
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 }

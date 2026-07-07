@@ -8,6 +8,17 @@
     android:layout_height="match_parent"
     tools:context=".ResultActivity">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        app:title=" "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:id="@+id/ResultadoCabecalho"
         android:layout_width="match_parent"
@@ -17,7 +28,7 @@
         android:background="@drawable/bg_roudedresult"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/toolbarResult">
 
         <TextView
             android:id="@+id/tv_TotalViagemResult"
@@ -40,46 +51,26 @@
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_VoltarResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="Voltar"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:background="@drawable/bg_button"
-        app:backgroundTint="@null"
-        app:icon="@drawable/ic_arrow_back"
-        app:iconTint="@color/white"
-        app:iconSize="28dp"
-        app:iconGravity="textStart"
-        app:iconPadding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_FazeroutroCalculoResult"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_FazeroutroCalculoResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="32dp"
+        android:background="@drawable/bg_button"
         android:text="Fazer outro Calculo"
         android:textColor="@color/white"
+        android:textSize="18sp"
         android:textStyle="bold"
-        android:textSize="15sp"
-        android:background="@drawable/bg_button"
         app:backgroundTint="@null"
         app:icon="@drawable/ic_arrow_forward"
-        app:iconTint="@color/white"
-        app:iconSize="28dp"
         app:iconGravity="textStart"
         app:iconPadding="10dp"
+        app:iconSize="28dp"
+        app:iconTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_VoltarResult" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <TextView
