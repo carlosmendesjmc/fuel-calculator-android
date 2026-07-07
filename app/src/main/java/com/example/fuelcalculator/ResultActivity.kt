@@ -42,7 +42,7 @@ class ResultActivity : AppCompatActivity() {
         val tvConsumo = findViewById<TextView>(R.id.tvConsumoResult)
         val tvDistancia = findViewById<TextView>(R.id.tvDistanciaResult)
 
-        tvTotalViagem.text = totalValue.toString()
+        tvTotalViagem.text = "R$ %.2f".format(totalValue).replace(".", ",")
         tvPreco.text = fuelPrice.toString()
         tvConsumo.text = vehicleConsumption.toString()
         tvDistancia.text = distance.toString()

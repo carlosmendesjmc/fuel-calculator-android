@@ -44,7 +44,11 @@ class VehicleConsumptionActivity : AppCompatActivity() {
         val btnProximo = findViewById<Button>(R.id.btn_ProximoVehicleConsumption)
 
         btnProximo.setOnClickListener {
-            val edtVehicleConsumtpionValue = edtConsumoPorLitro.text.toString().toInt()
+            val edtVehicleConsumtpionValue = edtConsumoPorLitro.text.toString().toIntOrNull()
+            if (edtVehicleConsumtpionValue == null) {
+                edtConsumoPorLitro.error = "Informe o Consumo"
+                return@setOnClickListener
+            }
             val intent = Intent(this, DistanceActivity::class.java)
             intent.putExtra("CONSUMO_POR_LITRO", edtVehicleConsumtpionValue)
             intent.putExtra("PRECO_COMBUSTIVEL", precoCombustivel)

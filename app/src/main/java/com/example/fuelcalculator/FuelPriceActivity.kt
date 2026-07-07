@@ -41,7 +41,11 @@ class FuelPriceActivity : AppCompatActivity() {
 
 
         btnProximo.setOnClickListener {
-            val edtFuelPriceValue = edtPrecoCombustivel.text.toString().toDouble()
+            val edtFuelPriceValue = edtPrecoCombustivel.text.toString().toDoubleOrNull()
+            if(edtFuelPriceValue == null){
+                edtPrecoCombustivel.error = "Insira o Preço"
+                return@setOnClickListener
+            }
             val intent = Intent(this, VehicleConsumptionActivity::class.java)
             intent.putExtra("PRECO_COMBUSTIVEL", edtFuelPriceValue)
             startActivity(intent)

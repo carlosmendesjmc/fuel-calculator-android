@@ -45,7 +45,11 @@ class DistanceActivity : AppCompatActivity() {
 
         btnVerResultado.setOnClickListener {
 
-            val distancia = edtDistancia.text.toString().toInt()
+            val distancia = edtDistancia.text.toString().toIntOrNull()
+            if (distancia == null) {
+                edtDistancia.error = "Informe a distância"
+                return@setOnClickListener
+            }
             val consumo = vehicleConsumption
             val precoLitro = precoCombustivel
 
