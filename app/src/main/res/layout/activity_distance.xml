@@ -31,7 +31,7 @@
 
 
     <TextView
-        android:id="@+id/edt_FuelPriceScreen"
+        android:id="@+id/edt_LabelFuelPriceScreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -44,9 +44,8 @@
         app:layout_constraintTop_toBottomOf="@+id/ViewFuelPriceScreen" />
 
 
-
     <EditText
-        android:id="@+id/editTextNumberDecimal"
+        android:id="@+id/edt_distance"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -62,7 +61,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_FuelPriceScreen" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_LabelFuelPriceScreen" />
 
 
 

@@ -28,7 +28,7 @@
         app:srcCompat="@drawable/ic_vehicleconsumption_screen" />
 
     <TextView
-        android:id="@+id/edt_FuelPriceScreen"
+        android:id="@+id/edt_LabelVehicleConsumption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ViewFeulPriceScreen" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal"
+        android:id="@+id/edtVehicleConsumption"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -57,7 +57,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_FuelPriceScreen" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_LabelVehicleConsumption" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_VoltarVehicleConsumption"

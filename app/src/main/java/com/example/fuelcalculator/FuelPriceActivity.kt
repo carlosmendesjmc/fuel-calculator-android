@@ -3,6 +3,8 @@ package com.example.fuelcalculator
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -19,6 +21,10 @@ class FuelPriceActivity : AppCompatActivity() {
             insets
         }
 
+        //Recupera dados
+
+        val edtPrecoCombustivel = findViewById<TextView>(R.id.edt_FuelPriceScreen)
+
         //Recuperar o button
 
         val btnVoltar = findViewById<Button>(R.id.btn_VoltarFuelPrice)
@@ -28,8 +34,11 @@ class FuelPriceActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+
         btnProximo.setOnClickListener {
+            val edtFuelPriceValue = edtPrecoCombustivel.text.toString().toDouble()
             val intent = Intent(this, VehicleConsumptionActivity::class.java)
+            intent.putExtra("PRECO_COMBUSTIVEL", edtFuelPriceValue)
             startActivity(intent)
         }
 
