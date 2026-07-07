@@ -2,12 +2,14 @@ package com.example.fuelcalculator
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.appbar.MaterialToolbar
 
 class DistanceActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +21,13 @@ class DistanceActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        //Recupera os dados toolbar
+
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbarDistance)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+
         //Recupera dados da intent
         val precoCombustivel = intent.getDoubleExtra("PRECO_COMBUSTIVEL",0.0)
         println("LOG CARLOS $precoCombustivel")
@@ -30,13 +39,8 @@ class DistanceActivity : AppCompatActivity() {
         val edtDistancia = findViewById<EditText>(R.id.edt_distance)
         //Recuperar o button
 
-        val btnVoltar = findViewById<Button>(R.id.btn_voltarDistance)
-        val btnVerResultado = findViewById<Button>(R.id.btn_VerResultadoDistance)
 
-        btnVoltar.setOnClickListener {
-            val intent = Intent(this, VehicleConsumptionActivity::class.java)
-            startActivity(intent)
-        }
+        val btnVerResultado = findViewById<Button>(R.id.btn_VerResultadoDistance)
 
 
         btnVerResultado.setOnClickListener {
@@ -51,8 +55,6 @@ class DistanceActivity : AppCompatActivity() {
             //Calculo do custo total
             val custoTotal = litrosNecessarios * precoLitro
 
-
-
             //Navegação para proxima tela
 
             val intent = Intent(this, ResultActivity::class.java)
@@ -60,13 +62,19 @@ class DistanceActivity : AppCompatActivity() {
             intent.putExtra("DISTANCIA_CONSUMO_POR_LITRO",consumo)
             intent.putExtra("DISTANCIA_DISTANCE_VALUE", distancia)
             intent.putExtra("DISTANCIA_CUSTO_TOTAL", custoTotal)
-
             startActivity(intent)
-
-
-
 
         }
 
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId){
+            android.R.id.home ->{
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }

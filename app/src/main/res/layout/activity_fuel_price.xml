@@ -17,40 +17,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_VoltarFuelPrice"
-        android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/bg_button"
-        android:text="Voltar"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:backgroundTint="@null"
-        app:icon="@drawable/ic_arrow_back"
-        app:iconGravity="textStart"
-        app:iconPadding="10dp"
-        app:iconSize="28dp"
-        app:iconTint="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_ProximoFuelPrice"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarFuelPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        app:title=" "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_ProximoFuelPrice"
         android:layout_width="0dp"
         android:layout_height="64dp"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/bg_button"
         android:text="Proximo"
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:backgroundTint="@null"
         app:icon="@drawable/ic_arrow_forward"
@@ -60,8 +48,7 @@
         app:iconTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_VoltarFuelPrice" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/edt_LabelFuelPriceScreen"
